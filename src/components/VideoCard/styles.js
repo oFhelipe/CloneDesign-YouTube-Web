@@ -53,10 +53,36 @@ export const VideoTime = styled.p`
 	right: 4px;
 `
 
+export const Thumbnail = styled.div`
+		position: relative;
+		min-height: 180px;
+        width: 320px;
+        object-fit: cover;
+		position: relative;
+		@media(min-width:510px) {
+			width: 100%;
+			min-height: 180px;
+			height: 10vw;
+    	}
+		@media(min-width:888px) {
+			min-height: 160px;
+    	}
+		video {
+			height: 100%;
+			width: 100%;
+			position: absolute;
+			object-fit: cover;
+			z-index: 1;
+			display: none;
+		}
+
+`
+
 export const LineOrWatchLaterContainer = styled.div`
 	position: absolute;
 	right: 4px;
 	top: 4px;
+	z-index: 2;
 `
 
 
@@ -125,22 +151,6 @@ export const Container = styled.div`
         	width: 95%;
 			height: ${(props) => props.width + 'px'};
 		}
-`
-
-export const Thumbnail = styled.div`
-		min-height: 180px;
-        width: 320px;
-        object-fit: cover;
-		position: relative;
-		@media(min-width:510px) {
-			width: 100%;
-			min-height: 180px;
-			height: 10vw;
-    	}
-		@media(min-width:888px) {
-			min-height: 160px;
-    	}
-
 `
 
 export const InfoAndChannelContainer = styled.div`
