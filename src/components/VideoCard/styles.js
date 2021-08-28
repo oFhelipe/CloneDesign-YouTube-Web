@@ -134,10 +134,13 @@ export const Thumbnail = styled.div`
 		position: relative;
 		@media(min-width:510px) {
 			width: 100%;
-			min-height: 150px;
-			height: 15vw;
+			min-height: 180px;
+			height: 10vw;
     	}
-	
+		@media(min-width:888px) {
+			min-height: 160px;
+    	}
+
 `
 
 export const InfoAndChannelContainer = styled.div`
