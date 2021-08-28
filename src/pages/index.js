@@ -7,11 +7,14 @@ import VideoList from "../components/VideoList";
 
 export default function Home() {
   return (
-    <div>
+    <div style={{display:"flex", flexDirection:"column"}}>
       <HeadConfig />
-      <Nav />
       <Menu />
+      <Nav />
       <VideoList>
+        <VideoCard />
+        <VideoCard />
+        <VideoCard />
         <VideoCard />
         <VideoCard />
         <VideoCard />

@@ -11,6 +11,9 @@ export const Container = styled.nav`
         display: none;
     }
 
+    @media(min-width:1312px) {
+        width: 240px;
+    }
 
     ul {
         margin-top: 4px;
