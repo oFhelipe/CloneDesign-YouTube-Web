@@ -69,7 +69,7 @@ function VideoCard() {
             <InfoAndChannelContainer>
                 <ChannelIcon />
                 <VideoInfo>
-                    <h3>Brasil tem 19.797.086 casos confirmados e 553.17 mortes por</h3>
+                    <h3>O Maior Segredo da Nilce! - Hora de Pôr Café (Parte 67)</h3>
                     <p>Cadê a chave?</p>
                     <p>2,2 mi de visualizações • há 2 anos</p>
                 </VideoInfo>
