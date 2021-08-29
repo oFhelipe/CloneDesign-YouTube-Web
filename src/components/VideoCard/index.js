@@ -32,6 +32,10 @@ function VideoCard() {
         timeout = setTimeout(()=> videoElement.current.style.display = "flex", 1000)
     }
 
+    function lineOrWatchLaterContainerHover(){
+        videoElement.current.style.display = "flex"
+    }
+
     function pauseOnleftHover(){
         if(timeout){
             clearTimeout(timeout)
@@ -48,7 +52,7 @@ function VideoCard() {
                         <source src="https://firebasestorage.googleapis.com/v0/b/iscool-api-upload.appspot.com/o/youtube-clone%2Fvideo.mp4?alt=media&token=142bfb3f-607a-4f38-b9d4-b2aab82cd8b5" type="video/mp4"/>
                     </video>
                 </Thumbnail>
-                <LineOrWatchLaterContainer onMouseEnter={playOnHover} onMouseLeave={pauseOnleftHover}>
+                <LineOrWatchLaterContainer onMouseEnter={lineOrWatchLaterContainerHover} >
 
                     <LineOrWatchLaterBox>
                         <LineOrWatchLaterText>Assistir mais tarde</LineOrWatchLaterText>
