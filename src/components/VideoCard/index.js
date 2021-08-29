@@ -45,7 +45,7 @@ function VideoCard() {
                 <Thumbnail onMouseEnter={playOnHover} onMouseLeave={pauseOnleftHover} >
                     <Image className="thumbnail" alt="thumbnail" layout='fill' src={thumbnail}/>
                     <video autoPlay muted ref={videoElement}>
-                        <source src="https://vod-progressive.akamaized.net/exp=1630202866~acl=%2Fvimeo-prod-skyfire-std-us%2F01%2F3782%2F21%2F543910236%2F2579406034.mp4~hmac=47de881b883f2f2fc06fd76202e7a4ed2a46c7d704cd9cb1610068439c03e12a/vimeo-prod-skyfire-std-us/01/3782/21/543910236/2579406034.mp4?filename=Bike+-+72566.mp4" type="video/mp4"/>
+                        <source src="https://firebasestorage.googleapis.com/v0/b/iscool-api-upload.appspot.com/o/youtube-clone%2Fvideo.mp4?alt=media&token=142bfb3f-607a-4f38-b9d4-b2aab82cd8b5" type="video/mp4"/>
                     </video>
                 </Thumbnail>
                 <LineOrWatchLaterContainer onMouseEnter={playOnHover} onMouseLeave={pauseOnleftHover}>
