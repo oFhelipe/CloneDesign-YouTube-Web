@@ -41,6 +41,7 @@ function VideoCard() {
             clearTimeout(timeout)
         }
         videoElement.current.style.display = "none"
+        videoElement.current.currentTime = 0
     }
 
     return (
