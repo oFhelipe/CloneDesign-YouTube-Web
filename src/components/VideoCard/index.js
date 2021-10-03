@@ -23,37 +23,30 @@ import {
 function VideoCard() {
     const videoCardRef = useRef(null)
     const videoElement = useRef(null)
-    const [ width, setWidth ] = useState(0)
-    useEffect(()=>{
-        setWidth(videoCardRef.current.offsetWidth)
-    },[videoCardRef])
     var timeout
     function playOnHover(){
         timeout = setTimeout(()=> videoElement.current.style.display = "flex", 1000)
-    }
-
-    function lineOrWatchLaterContainerHover(){
-        videoElement.current.style.display = "flex"
     }
 
     function pauseOnleftHover(){
         if(timeout){
             clearTimeout(timeout)
         }
+        console.log(videoElement.current.style.display)
         videoElement.current.style.display = "none"
         videoElement.current.currentTime = 0
     }
 
     return (
-        <Container  ref={videoCardRef} width={width}>
+        <Container onMouseEnter={playOnHover} onMouseLeave={pauseOnleftHover} ref={videoCardRef}>
             <ImageVideoContainer>
-                <Thumbnail onMouseEnter={playOnHover} onMouseLeave={pauseOnleftHover} >
+                <Thumbnail>
                     <Image className="thumbnail" alt="thumbnail" layout='fill' src={thumbnail}/>
                     <video autoPlay muted ref={videoElement}>
                         <source src="https://firebasestorage.googleapis.com/v0/b/iscool-api-upload.appspot.com/o/youtube-clone%2Fvideo.mp4?alt=media&token=142bfb3f-607a-4f38-b9d4-b2aab82cd8b5" type="video/mp4"/>
                     </video>
                 </Thumbnail>
-                <LineOrWatchLaterContainer onMouseEnter={lineOrWatchLaterContainerHover} >
+                <LineOrWatchLaterContainer>
 
                     <LineOrWatchLaterBox>
                         <LineOrWatchLaterText>Assistir mais tarde</LineOrWatchLaterText>

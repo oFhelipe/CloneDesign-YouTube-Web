@@ -33,7 +33,7 @@ function Menu() {
             <SearchInputContainer>
                 <SearchInput size="1" type="text" placeholder="Pesquisar"/>
                 <SearchButton>
-                  <IoMdSearch color="#606060" size={20}/>
+                  <IoMdSearch color="#eee" size={30}/>
                 </SearchButton>
               </SearchInputContainer>
             <MenuIcon className="lupa">

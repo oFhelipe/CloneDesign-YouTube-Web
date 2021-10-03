@@ -47,7 +47,7 @@ export const MenuIcon = styled.button`
 
 export const SearchContainer = styled.div`
   display: flex;
-  justify-content: flex-end;
+  justify-content: center;
   align-items: center;
   flex: 1;
   @media(min-width: 656px) {
@@ -57,6 +57,7 @@ export const SearchContainer = styled.div`
     & ${MenuIcon}.lupa {
       display:none;
     }
+    max-width: 700px;
   }
 `
 
@@ -76,12 +77,14 @@ export const SearchInput = styled.input`
   color: #FFF;
   display: flex;
   flex: 1;
-`
+  height: 36px;
+  padding-left: 16px;
+  `
 
 export const SearchButton = styled.button`
   background-color: #313131;
   width: 64px;
-  height: 30px;
+  height: 40px;
   border-top-right-radius: 2px;
   border-bottom-right-radius: 2px;
   display: flex;

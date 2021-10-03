@@ -1,27 +1,51 @@
-import { IoMdHome, IoMdCompass } from 'react-icons/io'
-import { MdSubscriptions, MdVideoLibrary } from 'react-icons/md'
-import { Container } from './styles'
+import { IoCompassOutline } from 'react-icons/io5'
+import { MdOutlineWatchLater, MdVideoLibrary, MdHomeFilled, MdOutlineSubscriptions, MdOutlineVideoLibrary, MdOutlineHistory, MdOutlinePlaylistPlay } from 'react-icons/md'
+import { CgPlayButtonR } from 'react-icons/cg'
+import { AiOutlineLike } from 'react-icons/ai'
+import { Container, NavItem, Separator } from './styles'
 
 export default function Nav(){
     return (
         <Container>
             <ul>
-                <li>
-                    <IoMdHome color="#FFF" size={24} />
+                <NavItem>
+                    <MdHomeFilled color="#FFF" size={24} />
                     <p className="active">Início</p>
-                </li>
-                <li>
-                    <IoMdCompass color="#909090" size={24} />
+                </NavItem>
+                <NavItem>
+                    <IoCompassOutline color="#909090" size={24} />
                     <p>Explorar</p>
-                </li>
-                <li>
-                    <MdSubscriptions color="#909090" size={24} />
+                </NavItem>
+                <NavItem>
+                    <MdOutlineSubscriptions color="#909090" size={24} />
                     <p>Inscrições</p>
-                </li>
-                <li>
-                    <MdVideoLibrary color="#909090" size={24} />
+                </NavItem>
+                <Separator />
+                <NavItem>
+                    <MdOutlineVideoLibrary color="#909090" size={24} />
                     <p>Biblioteca</p>
-                </li>
+                </NavItem>
+                <NavItem className="opitional">
+                    <MdOutlineHistory color="#909090" size={24} />
+                    <p>Histórico</p>
+                </NavItem>
+                <NavItem className="opitional">
+                    <CgPlayButtonR color="#909090" size={24} />
+                    <p>Seus videos</p>
+                </NavItem>
+                <NavItem className="opitional">
+                    <MdOutlineWatchLater color="#909090" size={24} />
+                    <p>Assistir mais tarde</p>
+                </NavItem>
+                <NavItem className="opitional">
+                    <AiOutlineLike color="#909090" size={24} />
+                    <p>Vídeos marcados como {'"Gostei"'}</p>
+                </NavItem>
+                <NavItem className="opitional">
+                    <MdOutlinePlaylistPlay color="#909090" size={24} />
+                    <p>Favoritos</p>
+                </NavItem>
+                <Separator />
             </ul>
         </Container>
     );
